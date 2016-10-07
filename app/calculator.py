@@ -6,9 +6,6 @@ class Calculator(object):
         return x + y
 
     def divide(self, x, y):
-    	if y == 0:
-			raise DivideByZeroMyException("Divisao por zero nao permitida!")		
-
         return x / y
 
 
