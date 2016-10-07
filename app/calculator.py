@@ -1,3 +1,5 @@
+from app.dividebyzero_exception import DivideByZeroMyException
+
 class Calculator(object):
  
     def add(self, x, y):
@@ -5,7 +7,7 @@ class Calculator(object):
 
     def divide(self, x, y):
     	if y == 0:
-			raise Exception("Divisao por zero nao permitida!")		
+			raise DivideByZeroMyException("Divisao por zero nao permitida!")		
 
         return x / y
 

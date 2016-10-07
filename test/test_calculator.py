@@ -1,5 +1,6 @@
 import unittest
 from app.calculator import Calculator
+from app.dividebyzero_exception import DivideByZeroMyException
  
 class CalculatorTest(unittest.TestCase):
  
@@ -14,7 +15,7 @@ class CalculatorTest(unittest.TestCase):
     def test_calculator_divide_method_should_raise_error_divide_by_zero(self):
         calc = Calculator()
 
-        with self.assertRaises(Exception) as context:
+        with self.assertRaises(DivideByZeroMyException) as context:
             calc.divide(2,0)
 
         self.assertTrue('Divisao por zero nao permitida!' in context.exception)
